@@ -1,4 +1,5 @@
 class Genius < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
   validates :name, presence: true
   validates :cost, presence: true
   validates :year, presence: true
