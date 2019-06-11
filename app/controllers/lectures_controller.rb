@@ -7,8 +7,8 @@ class LecturesController < ApplicationController
   def create
     @lecture = Lecture.new(lecture_params)
     @genius = Genius.find(params[:genius_id])
-    @lecture.genius_id = @genius.id
-    @lecture.user_id = current_user
+    @lecture.genius = @genius
+    @lecture.user = current_user
     if @lecture.save
       redirect_to lecture_path(@lecture)
     else
