@@ -1,0 +1,15 @@
+/* Carousel specific configuration */
+
+.carousel-container {
+  margin: 20px 300px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background: rgba(0,0,0,0.2)
+}
+
+.carousel-inner img {
+  object-fit: cover;
+  width: 200px;
+  height: 500px;
+  border-radius: 5px;
+}
