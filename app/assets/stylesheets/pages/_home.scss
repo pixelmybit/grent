@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+.homepage-container{
+  display: flex;
+  justify-content: space-between;
+  .homepage-picture {
+    height: 100vh;
+    width: 60vw;
+    background-image: asset-url("homepage-picture.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .homepage-form {
+    flex-grow: 1;
+    background-color: #393E46;
+  }
+}
