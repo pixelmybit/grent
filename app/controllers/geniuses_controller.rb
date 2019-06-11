@@ -34,6 +34,6 @@ class GeniusesController < ApplicationController
   end
 
   def genius_params
-    params.require(:genius).permit(:name, :cost, :year, :description, :iq, :category)
+    params.require(:genius).permit(:name, :cost, :year, :description, :iq, :category, :photo)
   end
 end
