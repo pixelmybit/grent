@@ -1,6 +1,6 @@
 .navbar-grent {
   justify-content: space-between;
-  background: white;
+  background:  #6a707a;
 }
 
 .navbar-grent .navbar-collapse {
@@ -12,5 +12,13 @@
 }
 
 img.border-radius {
-  border-radius: 2px;
+  border-radius: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #FFFF;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    color: #FFFF;
 }
