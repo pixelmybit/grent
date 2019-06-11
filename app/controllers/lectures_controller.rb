@@ -1,8 +1,5 @@
 class LecturesController < ApplicationController
   before_action :set_lecture, only: [:destroy]
-  def new
-    @lecture = Lecture.new
-  end
 
   def create
     @lecture = Lecture.new(lecture_params)
@@ -10,15 +7,15 @@ class LecturesController < ApplicationController
     @lecture.genius = @genius
     @lecture.user = current_user
     if @lecture.save
-      redirect_to lecture_path(@lecture)
+      redirect_to genius_path(@genius)
     else
-      render :new
+      render 'geniuses/show'
     end
   end
 
   def destroy
-   @lecture.destroy
-   redirect_to genius_path(@genius)
+    @lecture.destroy
+    redirect_to genius_path(@genius)
   end
 
   private

@@ -6,6 +6,7 @@ class GeniusesController < ApplicationController
 
   def show
     # @genius = Genius.find(params[:id])
+    @lecture = Lecture.new
   end
 
   def new
