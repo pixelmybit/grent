@@ -1,6 +1,7 @@
 class LecturesController < ApplicationController
   before_action :set_lecture, only: [:destroy]
   def new
+    @genius = Genius.find(params[:genius_id])
     @lecture = Lecture.new
   end
 

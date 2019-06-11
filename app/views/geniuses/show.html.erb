@@ -1,0 +1,7 @@
+<div class="form-lecture">
+  <%= simple_form_for ([@genius, @lecture]) do |f| %>
+  <%= f.input :start_time, as: :datetime %>
+  <%= f.input :end_time, as: :datetime %>
+  <%= f.submit "Book a Lecture", class: "btn btn-primary" %>
+<% end %>
+</div>
