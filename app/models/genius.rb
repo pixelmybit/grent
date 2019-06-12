@@ -4,5 +4,5 @@ class Genius < ApplicationRecord
   validates :year, presence: true
   belongs_to :user
   has_many :lectures
-  has_many :photos
+  has_many :photos, dependent: :destroy
 end

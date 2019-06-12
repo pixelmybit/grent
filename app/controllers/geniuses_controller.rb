@@ -9,15 +9,20 @@ class GeniusesController < ApplicationController
     @lecture = Lecture.new
   end
 
+  def show_my
+    @my_geniuses = Genius.where(user_id: current_user).order(name: :asc)
+  end
+
   def new
     @genius = Genius.new
+    show_my
   end
 
   def create
     @genius = Genius.new(genius_params)
     @genius.user = current_user
     if @genius.save
-      redirect_to genius_path(@genius)
+      redirect_to new_genius_path
     else
       render :new
     end
@@ -26,7 +31,7 @@ class GeniusesController < ApplicationController
   def destroy
     # @genius = Genius.find(params[:id])
     @genius.destroy
-    redirect_to geniuses_path
+    redirect_to new_genius_path
   end
 
   private
