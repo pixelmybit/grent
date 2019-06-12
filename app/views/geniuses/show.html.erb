@@ -18,9 +18,12 @@
 </div>
 
 <!-- Booking form for Genius -->
-<div class="container">
+<div class="container show-container">
+  <div class="text-description">
+    <%= render 'shared/text-description', genius: @genius%>
+  </div>
   <div class="form-wrapper">
-    <h2>Book a lecture by <br><%= @genius.name %></h2>
+    <h2>Book a lecture </h2>
     <%= render 'shared/form-lecture', genius: @genius, lecture: @lecture %>
   </div>
 </div>
