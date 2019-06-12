@@ -1,0 +1,21 @@
+.FixedHeightListContainer {
+    height: 1500px;
+    width: 450px;
+}
+
+.list-my-geniuses {
+    height:575px;
+    overflow: scroll;
+    list-style-type: none;
+  }
+
+.list-box {
+  border: 1px dotted $black;
+  padding: 5px;
+  margin: 5px;
+
+}
+.list-header-button{
+  display: flex;
+  justify-content: space-between;
+}
