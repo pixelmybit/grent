@@ -8,7 +8,7 @@
   <div class="carousel-container">
     <div class="carousel-inner">
      <% @genius.photos.each_with_index do |photo, i| %>
-     <div class="carousel-item <%= "active" if i == 0 %>">
+     <div class="carousel-item <%= "active" if i == 0  %>">
         <%= cl_image_tag photo.photo%>
      </div>
      <% end %>
@@ -27,5 +27,3 @@
     <%= render 'shared/form-lecture', genius: @genius, lecture: @lecture %>
   </div>
 </div>
-
-<!-- style="width: 400px; margin: 0 auto;" -->
