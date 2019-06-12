@@ -6,20 +6,24 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-container">
-   <div class="carousel-inner">
-       <% @genius.photos.each do |photo| %>
-     <div class="carousel-item active">
-       <%= cl_image_tag photo.photo %>
+    <div class="carousel-inner">
+     <% @genius.photos.each_with_index do |photo, i| %>
+     <div class="carousel-item <%= "active" if i == 0 %>">
+        <%= cl_image_tag photo.photo%>
      </div>
-       <% end %>
+     <% end %>
    </div>
+ </div>
 </div>
 </div>
 
 <!-- Booking form for Genius -->
-<div class="container">
+<div class="container show-container">
+  <div class="text-description">
+    <%= render 'shared/text-description', genius: @genius%>
+  </div>
   <div class="form-wrapper">
-    <h2>Book a lecture by <%= @genius.name %></h2>
+    <h2>Book a lecture </h2>
     <%= render 'shared/form-lecture', genius: @genius, lecture: @lecture %>
   </div>
 </div>

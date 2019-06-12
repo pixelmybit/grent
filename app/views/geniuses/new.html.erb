@@ -1,7 +1,9 @@
-<div class="container">
-<div class="form-genius">
+<div class="container d-flex">
+  <div class="form-genius">
   <h2>Add a Genius</h2>
   <%= render 'shared/form-genius', genius: @genius %>
-</div>
-
+  </div>
+  <div class="FixedHeightListContainer">
+    <%= render 'shared/list-my-geniuses' %>
+  </div>
 </div>

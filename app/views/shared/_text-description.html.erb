@@ -1,0 +1,12 @@
+<h2><%= @genius.name %></h2>
+<h3>Born in <%= @genius.year %></h3>
+<h3><%= @genius.category.capitalize %></h3>
+<p><%= @genius.description %></p>
+<div class="d-flex justify-content-around">
+  <div>
+  <i class="fas fa-dollar-sign"></i><%= @genius.cost %>
+  </div>
+  <div>
+  <i class="far fa-lightbulb"></i><%= @genius.iq %>
+  </div>
+</div>
