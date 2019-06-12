@@ -20,7 +20,7 @@
 <!-- Booking form for Genius -->
 <div class="container">
   <div class="form-wrapper">
-    <h2>Book a lecture by <%= @genius.name %></h2>
+    <h2>Book a lecture by <br><%= @genius.name %></h2>
     <%= render 'shared/form-lecture', genius: @genius, lecture: @lecture %>
   </div>
 </div>
