@@ -228,17 +228,17 @@ genius_ab = user_c.genius.create(name: "Thomas Edison", iq: 172, year: 1847, cos
 thomas_url1 = "https://res.cloudinary.com/dvw6gizri/image/upload/v1560268226/Thomas%20Edison/Thomas_Edison2_fmcgyw.jpg"
 thomas_url2 = "https://res.cloudinary.com/dvw6gizri/image/upload/v1560268224/Thomas%20Edison/ThomasEdison1_nlgm76.png"
 thomas_url3 = "https://res.cloudinary.com/dvw6gizri/image/upload/v1560268223/Thomas%20Edison/ThomasEdison2_zdvxh7.jpg"
-Photo.create!(remote_photo_url: thomas_url1, genius_id: genius_a.id)
-Photo.create!(remote_photo_url: thomas_url2, genius_id: genius_a.id)
-Photo.create!(remote_photo_url: thomas_url3, genius_id: genius_a.id)
+Photo.create!(remote_photo_url: thomas_url1, genius_id: genius_ab.id)
+Photo.create!(remote_photo_url: thomas_url2, genius_id: genius_ab.id)
+Photo.create!(remote_photo_url: thomas_url3, genius_id: genius_ab.id)
 
 genius_cd = user_d.genius.create(name: "Mark Twain", iq: 172, year: 1835, cost: 2500, category: "journalist", description: "Samuel Langhorne Clemens, better known by his pen name Mark Twain, was an American author and humorist. He wrote The Adventures of Tom Sawyer and its sequel, Adventures of Huckleberry Finn, the latter often called 'the Great American Novel'.")
 mark_url1 = "https://res.cloudinary.com/dvw6gizri/image/upload/v1560268423/Mark%20Twain/MarkTwain1_bqmkqw.jpg"
 mark_url2 = "https://res.cloudinary.com/dvw6gizri/image/upload/v1560268423/Mark%20Twain/MarkTwain2_zae2yb.jpg"
 mark_url3 = "https://res.cloudinary.com/dvw6gizri/image/upload/v1560268422/Mark%20Twain/MarkTwain3_ukpsdm.jpg"
-Photo.create!(remote_photo_url: mark_url1, genius_id: genius_c.id)
-Photo.create!(remote_photo_url: mark_url2, genius_id: genius_c.id)
-Photo.create!(remote_photo_url: mark_url3, genius_id: genius_c.id)
+Photo.create!(remote_photo_url: mark_url1, genius_id: genius_cd.id)
+Photo.create!(remote_photo_url: mark_url2, genius_id: genius_cd.id)
+Photo.create!(remote_photo_url: mark_url3, genius_id: genius_cd.id)
 
 
 # genius_n = Genius.create(name: "", year: 1815, cost: 500, category: "", description: "")
