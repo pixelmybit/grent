@@ -14,6 +14,7 @@ class GeniusesController < ApplicationController
   end
 
   def new
+    @photo = Photo.new
     @genius = Genius.new
     show_my
   end

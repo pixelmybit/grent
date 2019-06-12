@@ -1,18 +1,30 @@
-    <h2>My Geniuses</h2>
-    <ul class="list-my-geniuses ">
-    <% @my_geniuses.each do |genius| %>
-      <div class="list-box">
-      <li>
-        <div class="list-header-button">
-        <p><%= genius.name %></p>
-        <%= link_to 'Go to Genius', genius_path(genius), :class => "btn btn-success" %>
-        </div>
-        <p><%= genius.category.capitalize %></p>
-        <small><%= genius.description%></small>
-        <br>
-        <br>
-         <%= link_to 'Delete Genius', genius_path(genius), method: :delete, :class => "btn btn-danger" %>
-      </li>
+<h2 class="text-center">My Geniuses</h2>
+<ul class="list-scroll ">
+<% @my_geniuses.each do |genius| %>
+  <div class="list-box">
+  <li>
+    <div class="list-header-button">
+    <h3><%= genius.name %></h3>
+    <%= link_to 'Go to Genius', genius_path(genius), :class => "btn btn-success" %>
+    </div>
+    <p><%= genius.category.capitalize %></p>
+    <small><%= genius.description%></small>
+    <br>
+    <br>
+    <div class="d-flex justify-content-between">
+      <div>
+
+      <%= link_to 'Delete Genius', genius_path(genius), method: :delete, :class => "btn btn-danger" %>
       </div>
-    <% end %>
-    </ul>
+      <%= simple_form_for([genius, @photo]) do |f| %>
+      <div class="d-flex">
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.button :submit, "Add a Photo", class: "btn btn-primary" %>
+      <% end %>
+      </div>
+    </div>
+  </li>
+  </div>
+<% end %>
+</ul>
