@@ -1,0 +1,9 @@
+<%= simple_form_for (genius) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :year %>
+  <%= f.input :category, placeholder: 'Write the name of Genius category'%>
+  <%= f.input :description, as: :text, placeholder: 'Add the information describing your Genius here..' %>
+  <%= f.input :cost, as: :integer %>
+  <%= f.input :iq, as: :integer %>
+  <%= f.submit "Summon a Genius to your team", class: "btn btn-primary" %>
+<% end %>

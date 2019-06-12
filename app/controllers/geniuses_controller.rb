@@ -15,6 +15,7 @@ class GeniusesController < ApplicationController
 
   def create
     @genius = Genius.new(genius_params)
+    @genius.user = current_user
     if @genius.save
       redirect_to genius_path(@genius)
     else
@@ -35,6 +36,6 @@ class GeniusesController < ApplicationController
   end
 
   def genius_params
-    params.require(:genius).permit(:name, :cost, :year, :description, :iq, :category, :photo)
+    params.require(:genius).permit(:name, :year, :category, :description, :cost, :iq)
   end
 end
