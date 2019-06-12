@@ -6,3 +6,13 @@
 <p><%= genius.category %></p>
 <small><%= genius.description%></small>
 <% end %>
+
+<div class="card_photo_text_container">
+  <% @geniuses.each do |genius| %>
+  <%= link_to genius_path(genius) do  %>
+  <div class="card_photo_text" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path genius.photos.first.photo, width: 200, height: 200, crop: :fill, gravity: :face; %>)">
+    <%= genius.name %>
+  </div>
+    <% end %>
+    <% end %>
+</div>
