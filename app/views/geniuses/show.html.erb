@@ -9,21 +9,24 @@
     <div class="carousel-inner">
      <% @genius.photos.each_with_index do |photo, i| %>
      <div class="carousel-item <%= "active" if i == 0  %>">
-        <%= cl_image_tag photo.photo%>
-     </div>
-     <% end %>
-   </div>
- </div>
+      <%= cl_image_tag photo.photo%>
+    </div>
+    <% end %>
+  </div>
+</div>
 </div>
 </div>
 
 <!-- Booking form for Genius -->
 <div class="container show-container">
-  <div class="text-description">
-    <%= render 'shared/text-description', genius: @genius%>
+  <div class="form_card">
+    <div class="text-description">
+      <%= render 'shared/text-description', genius: @genius%>
+    </div>
   </div>
-  <div class="form-wrapper">
-    <h2>Book a lecture </h2>
-    <%= render 'shared/form-lecture', genius: @genius, lecture: @lecture %>
-  </div>
+<div class="form-wrapper form_card">
+  <h2>Book a lecture </h2>
+  <%= render 'shared/form-lecture', genius: @genius, lecture: @lecture %>
 </div>
+</div>
+<!-- </div> -->

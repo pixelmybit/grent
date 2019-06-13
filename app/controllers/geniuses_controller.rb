@@ -13,10 +13,15 @@ class GeniusesController < ApplicationController
     @my_geniuses = Genius.where(user_id: current_user).order(name: :asc)
   end
 
+  def show_my_bookings
+    @my_bookings = Lecture.where(user_id: current_user)
+  end
+
   def new
     @photo = Photo.new
     @genius = Genius.new
     show_my
+    show_my_bookings
   end
 
   def create
