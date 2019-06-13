@@ -1,0 +1,24 @@
+.home-banner {
+  background-image: url('http://3.bp.blogspot.com/-S7Z6WVrbSjg/VIvk5Xv6OEI/AAAAAAAAJ18/RCxg43obsYc/s1600/The%2BSolvay%2BConference%2C%2Bprobably%2Bthe%2Bmost%2Bintelligent%2Bpicture%2Bever%2Btaken%2C%2B1927%2B(2).jpg');
+  background-size: cover;
+  height: 100vh;
+  color: #eee;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+

@@ -1,23 +1,56 @@
-<div class="homepage-container">
-  <div class="homepage-form">
-    <p>.</p>
+
+ <div class="home-banner">
+  <!-- <h1>Geniuses through history</h1> -->
+</div>
+<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= "Like great beauty, great intelligence can be a blessing or a curse to those who possess it. Sometimes the smartest among us live the most difficult lives. " %>
+    </div>
   </div>
-  <div class="homepage-picture">
+  <div class="format-style">
+  <div class="format-outer">
+    <div>
+      <div class="format-inner">
+        <div class="format-inner2">
+          <div class="format-inner3">
+            <div class="format-inner4">
+              <div class="format-inner5">
+                <div class="format-inner6">
+                  <h3>
+                    <div>Explore holograms</div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div>
+
+  <div class="container">
+    <div class="row">
+      <% @geniuses.each do |genius| %>
+        <%= render 'shared/card-product', genius: genius%>
+      <% end %>
+    </div>
+  </div>
+
 </div>
-<br>
-<br>
-<br>
-<br>
-<div class="container" style="text-align: center;">
-  <h3 >We are geniuses and now you can become one too!</h3>
-  <br>
-  <p>You have a fantastic opportunity to improve you everlasting expanding knowledge of the world. </p>
-  <p>Browse through geniuses of the past and book a lecture with a hologram copy</p>
+
 </div>
+
 <br>
 <br>
-<br>
-<div class="card_banner">
-  <%= image_tag "solvay_conference_4.jpg", id: "front-page-image" %>
+  <h3>
+      <div>Introducing Geniuses throughout history</div>
+  </h3>
+  <br><br>
+  <%= render 'shared/banner'%>
 </div>
+
+<%= render 'shared/footer'%>
+<br>

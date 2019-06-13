@@ -1,6 +1,8 @@
 // Import your components CSS files here.
 @import "alert";
 @import "avatar";
+@import "cards";
+
 @import "navbar";
 @import "show";
 @import "card_full_photo";
@@ -9,5 +11,77 @@
 @import "form";
 @import "carousel";
 @import "list";
+@import "banner";
+@import "card_product";
+@import "footer";
 @import "card_form";
+
 @import "text";
+
+div {
+    display: block;
+  }
+
+.format-outer {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+}
+
+.format-inner {
+  text-align: left !important;
+  display: table !important;
+  table-layout: fixed !important;
+  width: 100% !important;
+  background: transparent !important;
+  border-width: initial !important;
+  border-style: none !important;
+  border-color: initial !important;
+  border-image: initial !important;
+  padding: 0px !important;
+}
+
+.format-inner2 {
+  display: table-cell !important;
+  width: 100% !important;
+  vertical-align: baseline !important;
+}
+
+.format-inner3 {
+  display: table !important;
+  width: 100% !important;
+  }
+
+.format-inner4 {
+  display: table-cell !important;
+    vertical-align: middle !important;
+    width: 100% !important;
+}
+
+.format-inner5 {
+  width: 100% !important;
+    margin-bottom: 8px !important;
+}
+
+.format-inner6 {
+  margin-top: 0;
+}
+
+.format-style {
+  overflow-anchor: none !important;
+    // padding-left: 24px !important;
+    padding-right: 24px !important;
+    max-width: 1680px !important;
+}
+
+h3 {
+  letter-spacing: normal !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-weight: bold;
+    color: rgb(72, 72, 72) !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    font-size: 24px !important;
+    line-height: 26px !important;
+
+}
+

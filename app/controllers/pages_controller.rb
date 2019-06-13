@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @geniuses = Genius.all
+    @geniuses = Genius.first(3)
   end
 end
