@@ -1,7 +1,7 @@
 class GeniusesController < ApplicationController
   before_action :set_genius, only: [:show, :destroy]
   def index
-    @geniuses = Genius.all
+    @geniuses = Genius.with_photo
   end
 
   def show
@@ -27,10 +27,21 @@ class GeniusesController < ApplicationController
   def create
     @genius = Genius.new(genius_params)
     @genius.user = current_user
+    # if @genius.save
+    #   redirect_to new_genius_path
+    # else
+    #   render :new
+    # end
     if @genius.save
-      redirect_to new_genius_path
+      respond_to do |format|
+        format.html { redirect_to new_genius_path }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render :new }
+        format.js  # <-- idem
+      end
     end
   end
 
