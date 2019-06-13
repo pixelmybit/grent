@@ -1,0 +1,12 @@
+<div class="col-lg-4">
+  <%= link_to genius_path(genius) do %>
+    <div class="card-product">
+      <%= cl_image_tag genius.photos.first.photo %>
+      <div class="card-product-infos">
+        <h2><%= genius.name %></h2>
+        <p><%= genius.description[0..50] %>...</p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
