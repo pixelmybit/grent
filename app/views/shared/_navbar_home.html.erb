@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-home">
   <%= link_to "/", class: "navbar-brand" do %>
   <%= image_tag "logo_grey.png", class: "border-radius"%>
   <% end %>
@@ -11,7 +11,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Find Geniuses", "geniuses", id: "search-nav-link"%>
+          <%= link_to "Find Geniuses", "geniuses", class: "nav-link", id: "search-nav-link"%>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "ludvig_londos.png", class: "avatar avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
