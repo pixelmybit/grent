@@ -15,7 +15,7 @@ class LecturesController < ApplicationController
 
   def destroy
     @lecture.destroy
-    redirect_to genius_path(@genius)
+    redirect_to new_genius_path
   end
 
   private
