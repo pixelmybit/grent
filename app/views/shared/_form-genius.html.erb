@@ -1,5 +1,5 @@
 <div class="form_card_new">
-  <%= simple_form_for (genius) do |f| %>
+  <%= simple_form_for genius, remote: true do |f| %>
     <%= f.input :name %>
     <%= f.input :year %>
     <%= f.input :category, placeholder: 'Write the name of Genius category'%>

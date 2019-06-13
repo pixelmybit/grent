@@ -11,6 +11,11 @@
   <br>
   <br>
   <div>
-    <%= render 'shared/list-my-geniuses' %>
+    <h2 class="text-center">My Geniuses</h2>
+    <ul class="list-scroll" id="list-all-my-geniuses">
+      <% @my_geniuses.each do |genius| %>
+      <%= render 'shared/list-my-geniuses', genius: genius, photo: @photo %>
+      <% end %>
+    </ul>
   </div>
 </div>

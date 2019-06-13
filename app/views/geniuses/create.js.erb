@@ -1,0 +1,17 @@
+function refreshForm(innerHTML) {
+  const newReviewForm = document.querySelector('#new_genius');
+  newReviewForm.innerHTML = innerHTML;
+}
+
+
+function addGenius(reviewHTML) {
+  const reviews = document.getElementById('list-all-my-geniuses');
+  reviews.insertAdjacentHTML('afterbegin', reviewHTML);
+}
+
+<% if @genius.errors.any? %>
+  refreshForm('<%= j render "shared/form-genius", genius: @genius %>');
+<% else %>
+  refreshForm('<%= j render "shared/form-genius", genius: @genius %>');
+  addGenius('<%= j render "shared/list-my-geniuses", genius: @genius %>');
+<% end %>
