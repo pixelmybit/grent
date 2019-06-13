@@ -6,5 +6,5 @@ class Genius < ApplicationRecord
   has_many :lectures
   has_many :photos, dependent: :destroy
 
-  scope :with_photo, -> { joins(:photos).where("photos.genius_id IS NOT NULL").uniq }
+  scope :with_photo, -> { joins(:photos).where("photos.genius_id IS NOT NULL").distinct }
 end
