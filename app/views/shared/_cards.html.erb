@@ -3,9 +3,16 @@
   <div class="card-trip card-trip-width">
     <%= cl_image_tag genius.photos.first.photo, crop: :fill, gravity: :face;%>
     <div class="card-trip-infos">
-      <h2><%= genius.name %></h2>
-      <p class="card-trip-pricing"><i class="fas fa-exclamation"></i><%= genius.iq%></p>
+      <div>
+        <h2><%= genius.name %></h2>
+        <small><%= genius.category.capitalize %></small>
+
+      </div>
+
+
+      <p class="card-trip-pricing"><i class="far fa-lightbulb"></i><%= genius.iq%></p>
     </div>
+
   </div>
 <% end %>
   </div>

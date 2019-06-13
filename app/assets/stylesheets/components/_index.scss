@@ -17,7 +17,14 @@
 @import "card_product";
 @import "footer";
 @import "card_form";
-
+@import "button_customized";
 @import "text";
 
+h1 {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 50px 0;
+  font-family: sans-serif;
+}
 

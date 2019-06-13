@@ -1,25 +1,31 @@
   <div class="form_card_new">
-  <li>
-    <div class="list-header-button">
-    <h3><%= genius.name %></h3>
-    <%= link_to 'Go to Genius', genius_path(genius), :class => "btn btn-success" %>
-    </div>
-    <p><%= genius.category.capitalize %></p>
-    <small><%= genius.description%></small>
-    <br>
-    <br>
-    <div class="d-flex justify-content-between">
-      <div>
+    <li>
+      <div class="list-header-button">
+        <h3><%= genius.name %></h3>
+        <%= link_to 'Go to Genius', genius_path(genius), :class => "button_cust_genius" %>
+      </div>
+      <p><%= genius.category.capitalize %></p>
+      <small><%= genius.description%></small>
+      <br>
+      <br>
+      <div class="d-flex justify-content-between">
+        <div class="list-delete-div">
 
-      <%= link_to 'Delete Genius', genius_path(genius), method: :delete, :class => "btn btn-danger" %>
+          <%= link_to 'Delete Genius', genius_path(genius), method: :delete, :class => "button_cust" %>
+        </div>
+        <div>
+          <%= simple_form_for([genius, Photo.new]) do |f| %>
+          <div>
+            <%= f.input :photo %>
+          </div>
+          <div>
+            <%= f.input :photo_cache, as: :hidden %>
+          </div>
+          <div>
+            <%= f.button :submit, "Add", class: "button_cust" %>
+          </div>
+          <% end %>
+        </div>
       </div>
-      <%= simple_form_for([genius, Photo.new]) do |f| %>
-      <div class="d-flex">
-        <%= f.input :photo %>
-        <%= f.input :photo_cache, as: :hidden %>
-        <%= f.button :submit, "Add a Photo", class: "btn btn-primary" %>
-      <% end %>
-      </div>
-    </div>
-  </li>
+    </li>
   </div>
