@@ -1,14 +1,15 @@
-.navbar-lewagon {
+.navbar-home {
   position: fixed;
-  height: 80px;
-  z-index: 10;
   width: 100vw;
+  height: 80px;
+  text-align: center;
+  justify-content: space-between;
   background-color: transparent;
   transition: 0.5s background-color ease;
   justify-content: space-between;
 }
 
-.navbar-light.navbar-lewagon-white {
+.navbar-light.navbar-home-white {
   background-color: #f2f2f2;
   .navbar-nav >.nav-item > #search-nav-link {
     color: black;
@@ -18,11 +19,11 @@
   }
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-home .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-home .navbar-brand img {
   width: 40px;
   margin: 30px;
 }
