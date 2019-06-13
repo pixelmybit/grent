@@ -8,7 +8,7 @@
         <h3><%=lecture.genius.name %> </h3>
       </div>
       <div>
-        <%= link_to 'Delete Booking', genius_path(lecture.genius), method: :delete, :class => "button_cust" %>
+        <%= link_to 'Delete Booking', lecture_path(lecture), method: :delete, :class => "button_cust" %>
       </div>
     </div>
       <p>Start Time: <%= lecture.start_time%></p>
