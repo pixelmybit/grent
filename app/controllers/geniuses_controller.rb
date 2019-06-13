@@ -1,7 +1,7 @@
 class GeniusesController < ApplicationController
-  before_action :set_genius, only: [:show, :destroy]
+  before_action :set_genius, only: [:show, :increment_ig, :destroy]
   def index
-    @geniuses = Genius.with_photo
+    @geniuses = Genius.with_photo.order(iq: :desc)
   end
 
   def show
@@ -15,6 +15,11 @@ class GeniusesController < ApplicationController
 
   def show_my_bookings
     @my_bookings = Lecture.where(user_id: current_user)
+  end
+
+  def increment_ig
+    @genius.iq += 1
+    @genius.save
   end
 
   def new
