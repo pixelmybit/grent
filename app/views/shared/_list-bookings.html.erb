@@ -1,0 +1,19 @@
+<h2>My booked lectures</h2>
+<ul class="list-scroll ">
+<% my_bookings.each do |lecture| %>
+  <div class="list-box">
+  <li>
+    <div class="d-flex justify-content-between">
+      <div>
+        <h3><%=lecture.genius.name %> </h3>
+      </div>
+      <div>
+        <%= link_to 'Delete Booking', genius_path(lecture.genius), method: :delete, :class => "btn btn-danger" %>
+      </div>
+    </div>
+      <p>Start Time: <%= lecture.start_time%></p>
+      <p>End Time: <%= lecture.end_time %></p>
+  </li>
+  </div>
+<% end %>
+</ul>

@@ -1,12 +1,13 @@
-.FixedHeightListContainer {
-    height: 500px;
-    width: 450px;
+.list-bookings {
+width: 45%;
 }
 
 .list-scroll {
     height:575px;
     overflow: scroll;
+    overflow-x: hidden;
     list-style-type: none;
+    padding-inline-start: 0px;
   }
 
 .list-box {

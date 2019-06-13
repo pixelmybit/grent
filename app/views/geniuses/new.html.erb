@@ -4,9 +4,8 @@
       <h2>Add a Genius</h2>
       <%= render 'shared/form-genius', genius: @genius %>
     </div>
-    <div class="FixedHeightListContainer">
-      <h2>My booked lectures</h2>
-
+    <div class="list-bookings">
+       <%= render 'shared/list-bookings', my_bookings: @my_bookings %>
     </div>
   </div>
   <br>
